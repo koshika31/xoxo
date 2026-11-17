@@ -1,8 +1,8 @@
 # XOXO Café
 
-![XOXO Café preview](./preview.png)
+A responsive React website for XOXO Café, a cafe and patisserie in Dehradun.
 
-A responsive React website for XOXO Café, a cafe and patisserie in Dehradun. The site includes a home page, menu viewer, gallery, custom-cake enquiry form, online ordering links, and contact information.
+The site includes a home page, menu viewer, gallery, custom-cake enquiry form, online ordering links, and contact information.
 
 ## Tech stack
 
@@ -75,6 +75,10 @@ npm run preview
 - Menu, gallery, and brand images are served from `public/image`.
 - Online ordering and social links point to external services.
 - The custom cake form currently validates in the browser and displays a confirmation message; connect it to a backend or form provider before using it for real enquiries.
+
+## Deployment
+
+This is a client-side Vite application. Build the project with `npm run build`, then deploy the generated `dist/` directory to a static hosting provider such as Vercel, Netlify, or GitHub Pages.
 
 ## License
 
