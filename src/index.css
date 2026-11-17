@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-size: 62.5%;
+        /* 1rem = 10px */
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-pink-50 text-brown-800 font-poppins antialiased overflow-x-hidden;
+        background-image: linear-gradient(to right, #fff0f5, #ffeaf2);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-pink-50;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-pink-300 rounded-full hover:bg-pink-400 transition;
+    }
+}
+
+@layer components {
+
+    /* Buttons */
+    .btn {
+        @apply inline-block mt-4 px-8 py-3 text-[1.7rem] cursor-pointer text-white bg-pink-400 rounded-full shadow-lg font-medium transition-all duration-300 hover:bg-pink-600 hover:-translate-y-1 hover:shadow-glow hover:tracking-wide active:scale-95;
+    }
+
+    /* Headings */
+    .heading {
+        @apply font-dancing text-[4rem] md:text-[6rem] text-pink-600 text-center pb-4 mb-12 relative z-10;
+        text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 105, 180, 0.2);
+    }
+
+    .heading span {
+        @apply block text-pink-400 text-[3.5rem] md:text-[5rem];
+    }
+
+    /* Box Containers */
+    .box-container {
+        @apply grid gap-8 px-4;
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    }
+
+    /* Cards */
+    .glass-card {
+        @apply bg-white/80 backdrop-blur-md border border-white/50 shadow-card rounded-[2rem];
+    }
+}
+
+/* Utilities */
+.text-outline {
+    -webkit-text-stroke: 1px #fff;
+}
+
+/* Swiper overrides for pink theme */
+.swiper-pagination-bullet-active {
+    background-color: #ff69b4 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ff69b4 !important;
+}
